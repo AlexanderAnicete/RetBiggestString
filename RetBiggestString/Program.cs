@@ -4,14 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RetBiggestString
+namespace ReturnBiggestString
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string[] input = { "my", "little", "pony" , "asdfds" };
-            Console.WriteLine(GetMax(input)); 
+            Console.WriteLine("Enter 4 words and the largest word will display.");
+            //string[] input = { "my", "little", "pony" , "asdfds" };
+            string[] input = new string[4];
+            for (int i = 0; i < input.Length; i++)
+            {
+                input[i] = Console.ReadLine();
+            }
+            Console.WriteLine("The largest word is: " + GetMax(input)); 
         }
         public static string GetMax(string [] input)
         {
